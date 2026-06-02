@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">K234112EApp</string>
+    <string name="title_activity_login">Login to K234112EApp</string>
+    <string name="title_activity_main">K234112EApp Main Panel</string>
+    <string name="title_activity_calculator">K234112EApp Calculator</string>
+    <string name="title_activity_order">K234112EApp Order Management</string>
+    <string name="title_activity_invoice">K234112EApp Invoice Details</string>
+    <string name="title_activity_employee">K234112EApp Employee Dashboard</string>
+    <string name="title_activity_employee_advanced">K234112EApp Advanced Employee Management</string>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/order_screen_bg">
+
+    <!-- Top Action header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_order_header"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Employee Advanced Hub"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"/>
+
+            <Button
+                android:id="@+id/btnBackEmployeeAdvanced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log out"
+                android:textColor="@color/order_complaint_text"
+                android:background="@drawable/bg_order_chip"
+                app:backgroundTint="@null"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a department from the spinner to filter staff listings."
+            android:textColor="#94A3B8"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Department Spinner Filter Grid -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FILTER BY DEPARTMENT"
+            android:textColor="@color/order_text_secondary"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spDepartmentFilter"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_order_search"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Control and Add actions Row -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Staff Members Directory"
+                android:textColor="@color/order_text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:id="@+id/btnAddEmployee"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="+ Add Staff"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_order_chip_active"
+                app:backgroundTint="@null"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <!-- Employees List -->
+        <ListView
+            android:id="@+id/lvEmployees"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

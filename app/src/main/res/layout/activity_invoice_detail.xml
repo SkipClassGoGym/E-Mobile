@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/order_screen_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Top Header Action -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice Summary"
+                android:textColor="@color/order_text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/btnBackInvoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textColor="@color/order_primary"
+                android:background="@drawable/bg_order_chip"
+                app:backgroundTint="@null"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <!-- Main Invoice Bill Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Order ID Badge Title -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/tvInvoiceOrderId"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="INVOICE #O000"
+                        android:textColor="@color/order_primary_dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date: 2026-06-02"
+                        android:textColor="@color/order_text_secondary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/order_border"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Partners Block (Customer / Employee) -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CLIENT DETAILS"
+                    android:textColor="@color/order_text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvInvoiceCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Name: Loading..."
+                    android:textColor="@color/order_text_primary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="16dp"
+                    android:lineSpacingExtra="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HANDLED BY"
+                    android:textColor="@color/order_text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvInvoiceEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Employee Staff: Loading..."
+                    android:textColor="@color/order_text_primary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="20dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/order_border"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Products Nested Panel Heading -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PURCHASED PRODUCTS LINES"
+                    android:textColor="@color/order_text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Dynamic container rendered in Java -->
+                <LinearLayout
+                    android:id="@+id/layoutInvoiceProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="24dp">
+                    
+                    <!-- Content will be injected dynamically -->
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/order_border"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Grand Total block -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GRAND TOTAL AMOUNT"
+                        android:textColor="@color/order_text_secondary"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/tvInvoiceTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:textColor="@color/order_primary_dark"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.K234112EApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/order_primary</item>
+        <item name="colorPrimaryDark">@color/order_primary_dark</item>
+        <item name="colorAccent">@color/purple_500</item>
+        
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/order_primary</item>
+        <item name="android:windowBackground">@color/order_screen_bg</item>
+    </style>
+
+    <style name="Theme.MyApplication" parent="Theme.K234112EApp" />
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Order Screen Colors -->
+    <color name="order_screen_bg">#F8FAFC</color>
+    <color name="order_primary">#0F172A</color>
+    <color name="order_primary_dark">#020617</color>
+    <color name="order_card_bg">#FFFFFF</color>
+    <color name="order_text_primary">#1E293B</color>
+    <color name="order_text_secondary">#64748B</color>
+    <color name="order_border">#E2E8F0</color>
+    <color name="order_pending_bg">#FEF3C7</color>
+    <color name="order_pending_text">#D97706</color>
+    <color name="order_success_bg">#DCFCE7</color>
+    <color name="order_success_text">#15803D</color>
+    <color name="order_warning_bg">#DBEAFE</color>
+    <color name="order_warning_text">#1D4ED8</color>
+    <color name="order_complaint_bg">#FEE2E2</color>
+    <color name="order_complaint_text">#B91C1C</color>
+
+    <!-- Calc App Colors -->
+    <color name="calc_bg">#0F172A</color>
+    <color name="calc_display_bg">#1E293B</color>
+    <color name="calc_btn_num">#334155</color>
+    <color name="calc_btn_op">#F97316</color>
+    <color name="calc_btn_special">#475569</color>
+</resources>

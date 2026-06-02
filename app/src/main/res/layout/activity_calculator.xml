@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/calc_bg"
+    android:padding="16dp">
+
+    <!-- Header bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scientific Calculator"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/btnBackCalc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="@color/calc_btn_op"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true"/>
+    </RelativeLayout>
+
+    <!-- Formula Screen & History -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/bg_order_header"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="bottom|end"
+        android:layout_marginBottom="16dp">
+
+        <!-- Saved Shared Pref Formula History -->
+        <TextView
+            android:id="@+id/tvCalcHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History: None"
+            android:textColor="#94A3B8"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"
+            android:singleLine="true" />
+
+        <!-- Input Formula -->
+        <TextView
+            android:id="@+id/tvCalcResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#38BDF8"
+            android:textSize="18sp"
+            android:layout_marginBottom="4dp"
+            android:singleLine="true" />
+
+        <!-- Current Output -->
+        <TextView
+            android:id="@+id/tvCalcValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Memory Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center">
+
+            <Button android:id="@+id/btnMC" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="MC" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnMR" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="MR" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnMPlus" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="M+" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnMMinus" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="M-" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+        </LinearLayout>
+
+        <!-- Advanced Operators Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btnSqrt" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="√" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnSquare" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="x²" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnInverse" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="1/x" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnPercent" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="%" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+        </LinearLayout>
+
+        <!-- Standard Controls Row (C, DEL) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btnC" android:layout_width="0dp" android:layout_weight="2" android:layout_height="match_parent" android:text="CLEAR" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnDel" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="DEL" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnDiv" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="/" android:textColor="@color/white" android:background="@drawable/bg_calc_button_equal" android:layout_marginHorizontal="4dp" />
+        </LinearLayout>
+
+        <!-- Keypad Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btn7" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="7" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btn8" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="8" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btn9" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="9" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnMul" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="×" android:textColor="@color/white" android:background="@drawable/bg_calc_button_equal" android:layout_marginHorizontal="4dp" />
+        </LinearLayout>
+
+        <!-- Keypad Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btn4" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="4" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btn5" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="5" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btn6" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="6" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnSub" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="-" android:textColor="@color/white" android:background="@drawable/bg_calc_button_equal" android:layout_marginHorizontal="4dp" />
+        </LinearLayout>
+
+        <!-- Keypad Row 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btn1" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="1" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btn2" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="2" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btn3" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="3" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnAdd" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="+" android:textColor="@color/white" android:background="@drawable/bg_calc_button_equal" android:layout_marginHorizontal="4dp" />
+        </LinearLayout>
+
+        <!-- Keypad Row 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btn0" android:layout_width="0dp" android:layout_weight="2" android:layout_height="match_parent" android:text="0" android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnDot" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="." android:textColor="@color/white" android:background="@drawable/bg_calc_button" android:layout_marginHorizontal="4dp" />
+            <Button android:id="@+id/btnEqual" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:text="=" android:textColor="@color/white" android:background="@drawable/bg_calc_button_equal" android:layout_marginHorizontal="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

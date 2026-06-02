@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_all_status"
+        android:title="All Status" />
+    <item
+        android:id="@+id/menu_complete"
+        android:title="Complete" />
+    <item
+        android:id="@+id/menu_not_payment"
+        android:title="Not Payment" />
+    <item
+        android:id="@+id/menu_on_logistic"
+        android:title="On Logistic" />
+    <item
+        android:id="@+id/menu_customer_complaint"
+        android:title="Customer Complaint" />
+</menu>

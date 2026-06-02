@@ -1,0 +1,6 @@
+{
+  "name": "K234112EApp",
+  "description": "Android application rebuild K234112E featuring advanced admin, employee, calculator, and order management features",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
